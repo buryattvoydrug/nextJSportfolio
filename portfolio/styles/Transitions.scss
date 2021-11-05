@@ -1,0 +1,90 @@
+.trans-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.trans-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.trans-exit {
+  opacity: 1;
+}
+.trans-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.nav-enter {
+  opacity: 0;
+  backdrop-filter: blur(10px);
+}
+.nav-enter-active {
+  opacity: 1;
+  backdrop-filter: blur(100px);
+  transition:  .7s;
+}
+.nav-exit {
+  opacity: 1;
+  backdrop-filter: blur(100px);
+}
+.nav-exit-active {
+  opacity: 0;
+  backdrop-filter: blur(10px);
+  transition:  0.5s;
+}
+
+.popup-enter {
+  opacity: 0;
+}
+.popup-enter-active {
+  opacity: 1;
+  transition: opacity 700ms;
+}
+.popup-exit {
+  opacity: 1;
+}
+.popup-exit-active {
+  opacity: 0;
+  transition: opacity 700ms;
+}
+
+
+.port-enter {
+  opacity: 0;
+  transform: scale(0.1);
+}
+.port-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.port-exit {
+  opacity: 1;
+}
+.port-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+.hero-enter {
+  opacity: 0;
+  transform: scale(0.5);
+  transform: translateY(50px);
+
+}
+.hero-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.hero-exit {
+  opacity: 1;
+}
+.hero-exit-active {
+  transform: translateY(50px);
+  opacity: 0;
+  // transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
