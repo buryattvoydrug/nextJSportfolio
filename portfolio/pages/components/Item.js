@@ -4,7 +4,6 @@ import Popup from './Popup'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 export default function Item({size,number,data}) {
-  console.log(data)
   const [show, setShow] = useState(false)
   const [item, setItem] = useState(null)
 
@@ -72,7 +71,7 @@ export default function Item({size,number,data}) {
                   <Popup data={data}/>
                 </div>
       </CSSTransition>
-        <div className="item-block">
+        {data && <div className="item-block">
           <span className="item__type">{data.type}</span>
           <h3 className="item__title">{data.title}</h3>
           <p className="item__text">
@@ -82,15 +81,15 @@ export default function Item({size,number,data}) {
           {documentToReactComponents(data.stack)}
           </ul>
           <button className="item__button" onClick={togglePopup}>Подробнее</button>
-        </div>
-        {size===0 && 
+        </div>}
+        {size===0 && data && 
         
           <img src={data.image1.fields.file.url} alt="" className="item__img" />
         }
-        {size===1 && 
+        {size===1 && data &&
           <img src={data.image2.fields.file.url} alt="" className="item__img" />
         }
-        {size===2 && 
+        {size===2 && data &&
           <img src={data.image3.fields.file.url} alt="" className="item__img" />
         }
       </div>

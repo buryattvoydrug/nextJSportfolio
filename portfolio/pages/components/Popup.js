@@ -3,10 +3,10 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 
 function Popup({ispopup,data}) {
-  console.log(data)
     return (
     <>
-         <div className="popup">
+    {data && 
+      <div className="popup">
           <div className="todo-block">
             <div className="todo">
               <h3 className="todo__title">Задача</h3>
@@ -104,6 +104,8 @@ function Popup({ispopup,data}) {
           </div>
 
         </div>
+    }
+         
 
     </>
   )

@@ -10,11 +10,10 @@ export default function Messages({data}) {
   setTimeout(()=>setShow2(true),4000)
   const [write, setWrite] = useState(true)
   setTimeout(()=>setWrite(false),4000)
-  console.log(data)
   return (
     <>
     
-                          <div className="about-block">
+                          {data && <div className="about-block">
                             <span className="message__title">Игорь веб-разработчик</span>
                             <div className="message">{documentToReactComponents(data.fields.message1)}</div>
                             <CSSTransition
@@ -42,7 +41,7 @@ export default function Messages({data}) {
                               <img src="/images/Печатание.gif" alt=""/>
                             </div>
                             </CSSTransition>
-                          </div>
+                          </div>}
     
     </>
   )

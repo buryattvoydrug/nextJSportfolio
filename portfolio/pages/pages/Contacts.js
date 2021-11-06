@@ -35,6 +35,7 @@ export default function Contacts({data}) {
                     <h2 className="about__title title">Контакты</h2>
                     <div className="contacts-block">
                       <h3 className="contacts__subtitle subtitle">Свяжитесь со мной любым удобным Вам способом.</h3>
+                      {data && 
                       <div className="doc">
                         <a href={data.fields.telegram}>
                           <img src="/images/telegram.png" alt="" className="doc__img" />
@@ -51,7 +52,7 @@ export default function Contacts({data}) {
                         <a href={data.fields.whats}>
                           <img src="/images/whats.png" alt="" className="doc__img" />
                         </a>
-                      </div>
+                      </div>}
                     </div>
                   </div>
             </CSSTransition>

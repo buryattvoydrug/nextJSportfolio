@@ -52,7 +52,7 @@ export default function Portfolio({data}) {
 
               </>: */}
 
-              {data.map((item,index)=>
+              {data && data.map((item,index)=>
                 (<Item key={index} data={Object.values(item)[2]} number={typeof window !== 'undefined' && window.innerWidth<1280?index:k[index]} size={index%3}/>)
               )}
                 {/* <Item number={0} size={'large'}/>

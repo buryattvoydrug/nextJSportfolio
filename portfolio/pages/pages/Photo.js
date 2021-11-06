@@ -4,7 +4,7 @@ export default function Photo() {
   return (
     <>
       <section className="main-photo">
-        {window.innerWidth<1280 ?
+        {typeof window !== 'undefined' && window.innerWidth<1280 ?
           <img src="images/herom.webp" alt="Игорь Радимов" />
         :
         <div className="container">
