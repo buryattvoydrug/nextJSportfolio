@@ -42,8 +42,8 @@ export default function Nav() {
                   unmountOnExit>
       <div className={typeof window !== 'undefined' && window.innerWidth<=1024? "nav-container" : "container"}>
           <div className="buttons">
-            <a href="/"><img src="/images/GitHub.png" alt="" /> </a>
-            <a href="/"><img src="/images/Behance.png" alt="" /> </a>
+            <a href="https://github.com/buryattvoydrug"><img src="/images/GitHub.png" alt="" /> </a>
+            <a href="https://www.behance.net/buryattvoydrug"><img src="/images/Behance.png" alt="" /> </a>
           </div>
           <ul className="nav-list subtitle">
             <li onClick={toggleMenu}><a className="link" href='#hero'>Обо мне</a></li>
