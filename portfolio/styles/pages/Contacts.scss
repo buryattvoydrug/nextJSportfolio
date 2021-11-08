@@ -71,8 +71,10 @@
       }
     }
   }
-}
-@media (min-width:768px) and (max-width:1280px){
+
+  .contacts-page{
+    justify-content: flex-end;
+  }
   .contacts{
     .contacts-block{
       display: flex;

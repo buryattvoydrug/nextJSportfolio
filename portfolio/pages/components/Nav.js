@@ -16,7 +16,7 @@ export default function Nav() {
   
   function scrollToBottom (){
     if (typeof window !== 'undefined') {
-      if(window.innerWidth<=1024){
+      if(window.innerWidth<=1280){
         toggleMenu()
       }
       window.scrollTo(0,10000)

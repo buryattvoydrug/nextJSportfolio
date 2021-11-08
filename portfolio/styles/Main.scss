@@ -71,7 +71,12 @@ li{
     width: 1140px;
   }
 }
-
+@media (max-width:1279px){
+  .container{
+    width: 90vw;
+    margin: 0 5vw;
+  }
+}
 @media(max-width:1024px){
   .title{
     font-size: 62px;

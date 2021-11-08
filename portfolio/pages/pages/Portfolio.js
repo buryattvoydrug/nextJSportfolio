@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import Item from '../components/Item'
+import PortfolioTitle from '../components/PortfolioTitle'
 
 export default function Portfolio({data}) {
   const [show, setShow] = useState(false)
@@ -33,11 +34,7 @@ export default function Portfolio({data}) {
                   classNames="port"
                   unmountOnExit>
                     <div className="">
-                      {typeof window !== 'undefined' && window.innerWidth<1280?
-                        <h2 className="portfolio__title title">Порт фолио</h2>
-                      :
-                        <h2 className="portfolio__title title">Портфолио</h2>
-                      }
+                      <PortfolioTitle/>
                     </div>
                   </CSSTransition>
             <div className="portfolio-list">
