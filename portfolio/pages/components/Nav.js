@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 
 export default function Nav() {
+
 
   const [menu,setMenu]=useState(false)
   const toggleMenu=()=>{
@@ -25,6 +26,18 @@ export default function Nav() {
     }
     
   }
+
+  const [width,setWidth]=useState(0)
+  const handleResize = () => {
+    setWidth(document.body.getBoundingClientRect().width)
+      console.log(document.body.getBoundingClientRect().width)      
+  }
+  useEffect(()=> {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
+  
   return (
     <>
     {typeof window !== 'undefined' && window.innerWidth<=1024 && 
