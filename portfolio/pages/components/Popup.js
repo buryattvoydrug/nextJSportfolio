@@ -29,7 +29,7 @@ function Popup({ispopup,data}) {
               <div className="link">
                 <img src="/images/l-behance.svg" alt="" />
                 <p className="link__text">
-                Более подробно о дизайне этой работы, а также <strong>с другими кейсами</strong> по <strong>веб-дизайну</strong> можно ознакомиться на <strong>Behance →</strong>
+                Более подробно c этой работой, а также <strong>с другими кейсами</strong> по <strong>веб-дизайну</strong> можно ознакомиться на <strong><a href="https://www.behance.net/buryattvoydrug">Behance →</a></strong>
                 </p>
               </div>
             </div>
@@ -47,7 +47,7 @@ function Popup({ispopup,data}) {
             <div className="">
               <div className="title">
                 <img src="/images/2.png" alt="" className="title__img" />
-                <h2 className="block__title">Backend</h2>
+                <h2 className="block__title">{data.backendTitle}</h2>
               </div>
               <p className="block__text">
               {documentToReactComponents(data.backend)}
@@ -59,10 +59,10 @@ function Popup({ispopup,data}) {
               <div className="link">
                 <img src="/images/l-github.svg" alt="" />
                 <p className="link__text">
-                <strong>Код</strong> проекта, а также другие <strong>мои работы</strong> можно найти на <strong>GitHub →</strong>
+                <strong>Код</strong> проекта, а также другие <strong>мои работы</strong> можно найти на <strong><a href="https://github.com/buryattvoydrug">GitHub →</a></strong>
                 </p>
               </div>
-              <img src="/images/backend.png" alt="" className="block__img" />
+              <img src={data.backendImg.fields.file.url} alt="" className="block__img" />
             </div>
           </div>
 
@@ -74,11 +74,13 @@ function Popup({ispopup,data}) {
             </div>
           </div>
 
-          <div className="block right-block">
+         {data.frontendTitle!=='0' &&
+         <>
+         <div className="block right-block">
             <div className="">
               <div className="title">
                 <img src="/images/3.png" alt="" className="title__img" />
-                <h2 className="block__title">Frontend</h2>
+                <h2 className="block__title">{data.frontendTitle}</h2>
               </div>
               <p className="block__text">
               {documentToReactComponents(data.frontend)}
@@ -93,6 +95,7 @@ function Popup({ispopup,data}) {
               </ul>
             </div>
           </div>
+         </>}
 
           <div className="todo-block">
             <div className="todo">

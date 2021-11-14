@@ -68,7 +68,7 @@
   .item__img{
     position: absolute;
     right:-40px;
-    bottom:-80px;
+    top:20px;
 
   }
 }
@@ -132,7 +132,7 @@ background: linear-gradient(to right bottom, rgba(231, 76, 60, .8), rgba(0, 0, 0
 @media (min-width:1280px) and (max-width:1440px){
   .size0{
     .item__img{
-      right:-190px;
+      right:-230px;
     }
   }
   .size1{
@@ -213,7 +213,7 @@ background: linear-gradient(to right bottom, rgba(231, 76, 60, .8), rgba(0, 0, 0
 @media(min-width:420px) and (max-width:1023px){
   .size0{
     .item__img{
-      left:220px;
+      left:270px;
       bottom:0px;
     }
   }
